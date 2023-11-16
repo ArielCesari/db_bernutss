@@ -7,11 +7,7 @@ inner join tipo_producto on  productos.tipo_id = tipo_producto.id
 where descuento = 0
 ;
 
-select distinct  SUM(precio  * p_aumento) as "Precio con aumento"
-from productos
-inner join tipo_producto on  productos.tipo_id = tipo_producto.id
-where descuento = 0
-;
+
 
 -- Creo la función 
 drop function if exists  fn_precio_aumentado ;

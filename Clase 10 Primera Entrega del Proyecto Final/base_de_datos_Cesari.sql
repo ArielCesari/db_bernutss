@@ -80,6 +80,7 @@ CREATE TABLE IF NOT EXISTS  tipo_usuario (
 );
 
 
+
 -- Creo la tabla "pedidoFinal". La misma tendrá una columna llamada"id" auto incremental(PK).Detallo los tipos de datos.Aclaro cuales deben ser "Not Null"
 -- Se crea a modo de "tabla pivot". Para lograr generar una relación de muchos a muchos entre las tablas carrito y productos.
 DROP TABLE IF EXISTS pedido_final;
