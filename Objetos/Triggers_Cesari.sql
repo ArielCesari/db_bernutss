@@ -53,7 +53,7 @@ CREATE TABLE IF NOT EXISTS bernutss_db.LOG_AUDITORIA_2
 );
 
 -- Crear el trigger TRG_LOG_tipo_usuario_2
-DROP TRIGGER IF EXISTS TRG_LOG_tipo_usuario_2;
+DROP TRIGGER IF EXISTS TRG_LOG_usuarios_2;
 DELIMITER //
 CREATE TRIGGER TRG_LOG_usuarios_2 AFTER INSERT ON bernutss_db.usuarios
 FOR EACH ROW 
@@ -71,6 +71,6 @@ INSERT INTO usuarios (nombre, apellido, mail, contrasenia)
 VALUES ("Leandro", "Gonzalez","leandro@hotmail.com", "****") ;
 
 
-select * from tipo_usuarios;
+
 
 

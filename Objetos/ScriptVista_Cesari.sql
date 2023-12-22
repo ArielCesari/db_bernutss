@@ -3,11 +3,12 @@
 
    CREATE or replace view usuarios_email AS
     (
-    SELECT nombre as "Nombre de Usuario", apellido as "Apellido del usuario",  mail as "Corre electronico con dominio GMAIL"
+    SELECT nombre as "Nombre de Usuario", apellido as "Apellido del usuario",  mail as "Correo electronico con dominio GMAIL"
 	from usuarios
 	where lower(mail) like '%gmail%'
     );
     
+  
 -- Creación de segunda Vista: Traemos la cantidad de productos con descuento
 
    CREATE or replace view productos_con_descuento AS
@@ -16,6 +17,8 @@
     where descuento > 0
     
     );
+    
+   
     
 -- Creación de tercera  Vista:  Traemos los usuarios que son administradores.
   
@@ -27,6 +30,8 @@
     where tipo_usuario.tipo like "Administrador"
     );
     
+   
+    
 -- Creación de cuarta vista : Traemos el precio máximo para cada producto , agrupado por nombre.
  CREATE or replace view precio_maximo AS
     (
@@ -34,6 +39,8 @@ SELECT distinct nombre, MAX(precio) AS precio_maximo
 FROM productos
 GROUP BY nombre
 );
+
+
 
 -- Creación de quinta vista :  Traemos todos los productos con categoria frutos secos. Ordenado del mayor al menor precio.
  CREATE or replace view frutos_secos AS
@@ -45,6 +52,8 @@ where tipo_producto.categoria like "%Frutos secos%"
 order by precio desc
 );
 
+
+ 
 
 
 

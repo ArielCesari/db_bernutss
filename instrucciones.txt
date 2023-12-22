@@ -1,0 +1,35 @@
+Instrucciones de Implementación de la Base de Datos Bernutss:
+
+Para asegurar la correcta construcción y población de la base de datos, siga el orden de ejecución de los scripts SQL proporcionado a continuación.
+Es importante que, para continuar con el siguiente script, se corrobore que no haya errores.
+
+
+Script de Estructura Principal:
+Comience con el archivo base_de_datos_Cesari.sql . Este script establece la estructura fundamental de la base de datos, creando todas las tablas necesarias con sus respectivas columnas y tipos de datos.
+
+
+Población de Datos Iniciales:
+Ejecute insercion_datos_Cesari.sql para insertar datos en las tablas. 
+
+Vistas para Prensa:
+Utilice ScriptVista_Cesari.sql para configurar vistas. Estas son esenciales para presentar datos complejos de manera simplificada.
+
+
+Funciones:
+Luego prosiga con Formato_Cesari.sql, que define funciones personalizadas.
+
+Procedimientos :
+El siguiente paso es ejecutar el archivo Stored_Cesari.sql para crear procedimientos almacenados que proporcionan una manera de encapsular la lógica de negocio y las operaciones de la base de datos que pueden llegar a repetirse en el tiempo.
+
+
+Triggers:
+Continúe con Triggers_Cesari.sql  Este archivo contiene triggers esenciales para mantener la integridad de la base de datos, automatizando tareas como la creación de logs de auditoría.
+
+*********************************************************************************************************************************************************************
+
+Permisos de Usuario:
+Finalmente, establezca los permisos de usuario con Sentencias_Cesari.sql 
+
+Restauración y Rollback:
+En caso de que necesite revertir a un estado anterior, puede utilizar los puntos de guardado creados dentro de las transacciones o restaurar desde el último backup realizado.
+Un ejemplo de esto es el archivo TCL_Cesari.sql
